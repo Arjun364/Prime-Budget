@@ -14,8 +14,15 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        "poppins":["poppins","sans-serif"]
+        "poppins":["poppins","sans-serif"],
+        "jura":["jura","sans-serif"],
+        "kanit":["kanit","sans-serif"],
       },
+      colors:{
+        "orange":"#FFAA17",
+        "orange-light":"#F9C468",
+        "orange-dark":"#875C00",
+      }
     },
   },
   plugins: [
