@@ -1,3 +1,4 @@
+
 // Landing page
 const navbar = document.getElementById('navigationbar');
 
@@ -9,6 +10,11 @@ window.addEventListener('scroll', () => {
   }
 });
 
+const move =(props)=>{
+  if (props==="auth") {
+    window.location="./src/public/Authentication.html"
+  }
+}
 
 // auth page
 
