@@ -16,15 +16,57 @@ body{
 }
 
 /* Typography */
+
+.heading1{
+    @apply font-kanit font-medium leading-6 md:leading-10 text-[28px] md:text-[34px] lx:text-[48px] lg:text-[40px] ;
+}
+
+.heading2{
+    @apply font-bold text-[23px] lg:text-[36px] ;
+}
+
+.subHeading1{
+    @apply font-bold text-[1.2rem];
+}
 .navFont{
     @apply font-bold focus:text-white
     focus:bg-orange-dark md:focus:bg-transparent md:focus:text-orange-dark 
     block py-2 px-3 text-gray-900 md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-dark md:p-0 ;
 }
 
+.small2{
+    @apply text-[1rem] lx:text-[20px] font-light leading-6 md:leading-9;
+}
+
+/* section */
+
+.section1{
+    @apply w-full min-h-[90vh] py-[3rem] px-[1rem] lg:px-[5rem];
+}
+
 
 /* btns */
 
 .btn{
-    @apply text-orange-dark font-bold bg-white hover:bg-orange-dark hover:text-white focus:bg-black focus:text-white focus:ring-0 focus:outline-none uppercase rounded-lg text-sm px-4 py-2 text-center;
+    @apply text-[2rem] text-orange-dark font-bold bg-white hover:bg-orange-dark hover:text-white focus:bg-black focus:text-white focus:ring-0 focus:outline-none uppercase rounded-lg text-sm px-4 md:px-6 py-2  text-center ;
+}
+
+.btn2{
+    @apply text-[2rem] text-white font-bold bg-orange-dark hover:bg-orange-dark hover:text-white focus:bg-black focus:text-white focus:ring-0 focus:outline-none uppercase rounded-lg text-sm px-4 md:px-6 py-2 text-center;
+}
+
+.btn3{
+    @apply w-full h-[2.5rem] bg-orange hover:bg-orange-dark focus:bg-black rounded-md
+    text-white font-bold;
+}
+
+
+/* slip */
+
+.slip{
+    @apply w-full px-[2rem] py-[2rem] flex flex-col justify-center items-center gap-3 border-[1px] border-solid border-black rounded-md hover:shadow-lg transition-all ease-linear duration-150 cursor-pointer;
+}
+
+.slip2{
+    @apply w-full;
 }

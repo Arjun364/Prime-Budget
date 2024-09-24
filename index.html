@@ -2,60 +2,315 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Project Title -->
-    <title>Project Template</title>
-    <!-- favicon link  -->
-    <link rel="shortcut icon" href="./src/assets/Vector.svg" type="image/x-icon">
-    <!-- Style.css link  -->
-    <link rel="stylesheet" href="./src/style/output/style.css">
-    <!-- fontawesome link -->
-    <script src="https://kit.fontawesome.com/7f4f6e1f8e.js" crossorigin="anonymous"></script>
-    <!-- js link -->
-     <script src="./src/js/index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Project Title -->
+  <title>Project Template</title>
+  <!-- favicon link  -->
+  <link rel="shortcut icon" href="./src/assets/Vector.svg" type="image/x-icon">
+  <!-- Style.css link  -->
+  <link rel="stylesheet" href="./src/style/output/style.css">
+  <!-- fontawesome link -->
+  <script src="https://kit.fontawesome.com/7f4f6e1f8e.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <section class="w-full h-[90vh] bg-gradient-to-t from-white from-10%  via-orange-light via-30% to-orange">
-        <nav class=" fixed w-full z-20 top-0 start-0 ">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:py-4  md:px-[5rem]">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="./src/assets/logo.svg" class="h-12 " alt="Flowbite Logo">
-            </a>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" class="btn">Get started</button>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-0 focus:ring-gray-800  aria-controls="navbar-sticky" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                  </svg>
-              </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-              <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                <li>
-                  <a href="#" class="navFont" aria-current="page">Home</a>
-                </li>
-                <li>
-                  <a href="#" class="navFont">Features</a>
-                </li>
-                <li>
-                  <a href="#" class="navFont">About Us</a>
-                </li>
-                <li>
-                  <a href="#" class="navFont ">How it works ?</a>
-                </li>
-              </ul>
-            </div>
-            </div>
-          </nav>
-    </section>    
+  <section class="w-full h-[90vh] bg-gradient-to-t from-white from-10%  via-orange-light via-30% to-orange ">
+    <!-- navigarion section -->
+    <nav id="navigationbar" class="fixed w-full z-20 top-0 start-0 ">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:py-4  md:px-[3rem] lg:px-[5rem]">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./src/assets/logo.svg" class="h-12 " alt="Flowbite Logo">
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button type="button" class="btn">Get started</button>
+          <button data-collapse-toggle="navbar-sticky" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-0 focus:ring-gray-800  aria-controls="
+            navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+            <li>
+              <a href="#" class="navFont" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="navFont">Features</a>
+            </li>
+            <li>
+              <a href="#" class="navFont">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="navFont ">How it works ?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section -->
+    <section
+      class="w-full h-full flex-col lg:flex-row pt-[6rem] lg:py-0 md:px-[5rem] lx:px-[9rem] flex justify-end lg:justify-between items-center  ">
+      <div class="flex flex-col items-center lg:items-start gap-3">
+        <h1 class="heading1 text-white">Prime Budget</h1>
+        <h1 class="heading1">Simple Budget Calculator</h1>
+        <p class="text-white text-sm text-center md:text-[1rem]">Effortlessly track your expenses and manage your
+          budget.</p>
+        <button type="button" class="btn2">Get started</button>
+      </div>
+      <img class=" w-[20rem] lg:w-[27rem] lx:w-[35rem] lg:absolute lg:bottom-[5rem] lx:bottom-[1rem] right-[7rem]"
+        src="./src/assets/Freelancer--Streamline-London.svg.svg" alt="The man with a lap">
+    </section>
+  </section>
+
+  <!-- What makes prime budget unique -->
+  <section class="section1 flex flex-col gap-[4rem] ">
+    <h1 class="heading1">What Makes Prime Budget Unique?</h1>
+    <div class="w-full h-full">
+      <div class="grid lg:grid-cols-2 grid-rows-2 gap-4">
+        <div class="slip">
+          <h2 class="heading2">Expense Tracking</h2>
+          <p class="text-sm">Prime Budget helps you track your daily, weekly, and monthly expenses in one place. Easily
+            categorize spending like groceries, utilities, and entertainment, so you stay in control of your finances.
+          </p>
+        </div>
+        <div class="slip">
+          <h2 class="heading2">Income Management</h2>
+          <p class="text-sm">Log all your sources of income, including salary, freelance work, or side projects. Monitor
+            how much money comes in each month to effectively plan your budget.</p>
+        </div>
+        <div class="slip">
+          <h2 class="heading2">Budget Monitoring</h2>
+          <p class="text-sm">Stay aware of your overall financial health by monitoring your budget balance in real time.
+            Prime Budget automatically updates as you add or remove income and expenses, showing how much you have left
+            to spend.</p>
+        </div>
+        <div class="slip">
+          <h2 class="heading2 text-center md:text-left">User-Friendly Interface</h2>
+          <p class="text-sm">Designed with simplicity in mind, Prime Budget features an intuitive interface that even
+            budgeting beginners can master. The clean layout makes adding and managing transactions a breeze.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- How its works -->
+  </section>
+
+  <section class="section1 px-1 flex flex-col gap-[1rem] lg:gap-[3rem] ">
+    <!-- heading section  -->
+    <div>
+      <h1 class="heading1">How It Works</h1>
+      <p class="subHeading1 text-orange-light">Simple Steps to Manage Your Budget</p>
+    </div>
+    <div class="w-full grid  grid-rows-2 lg:grid-cols-2 gap-6 lg:gap-9">
+      <div class="slip2">
+        <h2 class="heading2 flex items-center gap-4">
+          <div class="min-w-[3rem] h-[3rem] flex items-center justify-center rounded-full bg-black text-white">1</div>
+          Add Your Income
+        </h2>
+        <p>Enter your income sources such as salary, freelance earnings, or other streams. This will give you an
+          overview of your total available funds.</p>
+      </div>
+      <div class="slip2">
+        <h2 class="heading2 flex items-center gap-4">
+          <div class="min-w-[3rem] h-[3rem] flex items-center justify-center rounded-full bg-black text-white">2</div>
+          List Your Expenses
+        </h2>
+        <p>Add and categorize your expenses (e.g., groceries, utilities, entertainment) to get a clear picture of your
+          spending.</p>
+      </div>
+      <div class="slip2">
+        <h2 class="heading2 flex items-center gap-4">
+          <div class="min-w-[3rem] h-[3rem] flex items-center justify-center rounded-full bg-black text-white">3</div>
+          Monitor Your Budget Balance
+        </h2>
+        <p>Track your remaining balance in real time as Prime Budget automatically updates with each transaction.</p>
+      </div>
+      <div class="slip2">
+        <h2 class="heading2 flex items-center gap-4">
+          <div class="min-w-[3rem] h-[3rem] flex items-center justify-center rounded-full bg-black text-white">4</div>
+          Adjust and Plan Your Finances
+        </h2>
+        <p>Modify your budget as needed to accommodate new income, expenses, or financial goals.</p>
+      </div>
+    </div>
+
+  </section>
+  <!-- about us -->
+  <section class="section1 flex flex-col relative">
+    <div>
+      <h1 class="heading1">About Us</h1>
+      <p class="subHeading1 text-orange-light">Our Mission</p>
+    </div>
+    <div class="w-full flex flex-col lg:flex-row items-center lg:items-start lg:justify-between">
+      <div class="small2 lg:max-w-[30rem] lx:max-w-[40rem]">
+        <p>At Prime Budget, our goal is to simplify personal finance management for everyone. We believe that budgeting
+          should be accessible, straightforward, and stress-free. Whether you're looking to manage your daily expenses,
+          save for future goals, or simply get a better handle on your finances, Prime Budget is designed to help you
+          take control.</p>
+        <p>
+          Our simple yet powerful budget calculator provides the tools you need to track your income, manage your
+          expenses, and plan your financial future with ease. We're committed to helping you build a healthier
+          relationship with money—one budget at a time.
+        </p>
+      </div>
+      <img src="./src/assets/Conference--Streamline-London.svg" alt="Conference image"
+        class="md:w-[26rem] lx:w-[35rem] lg:absolute md:bottom-[10rem] lx:bottom-[5rem] right-[4rem]">
+    </div>
+  </section>
+
+  <!-- FAQ section -->
+  <section class="section1 bg-orange-light flex flex-col gap-8">
+    <h1 class="heading1 text-white">FAQ : Frequently Asked Questions</h1>
+
+    <!-- questions -->
+
+    <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-orange-dark text-white">
+      <h2 id="accordion-color-heading-1">
+        <button type="button"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black rounded-t-xl focus:ring-0 focus:ring-blue-200 gap-3 bg-white"
+          data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
+          <span>Is Prime Budget free to use?</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5 5 1 1 5" />
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+        <div class="p-5 border border-b-0 border-gray-200 bg-white">
+          <p class="mb-2 text-black ">Yes, Prime Budget is completely free to use, with no hidden charges or premium
+            features. Simply start using it to manage your budget today.</p>
+        </div>
+      </div>
+      <h2 id="accordion-color-heading-2">
+        <button type="button"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black focus:ring-0 focus:ring-blue-200 gap-3 bg-white"
+          data-accordion-target="#accordion-color-body-2" aria-expanded="false" aria-controls="accordion-color-body-2">
+          <span>Do I need to create an account to use Prime Budget?</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5 5 1 1 5" />
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+        <div class="p-5 border border-b-0 border-gray-200 bg-white">
+          <p class="mb-2 text-black">Yes, you need to create an account to use Prime Budget. However, the data is not
+            stored in a database—it is saved locally on your device. This ensures your data remains private and
+            accessible only on the device you use.</p>
+        </div>
+      </div>
+      <h2 id="accordion-color-heading-3">
+        <button type="button"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black focus:ring-0 focus:ring-blue-200 gap-3 bg-white"
+          data-accordion-target="#accordion-color-body-3" aria-expanded="false" aria-controls="accordion-color-body-3">
+          <span>Can I export my budget data?</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5 5 1 1 5" />
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+        <div class="p-5 border border-b-0 border-gray-200 bg-white">
+          <p class="mb-2 text-black">Currently, Prime Budget does not support exporting data, but we’re working on
+            adding this feature in future updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- footer section -->
+
+  <footer class="bg-white dark:bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-xl px-[2rem] md:px-[4rem] py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="#" class="flex items-center">
+            <img src="./src/assets/logo2.svg" class="h-10 me-3" alt="FlowBite Logo" />
+          </a>
+        </div>
+        <div class="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="https://flowbite.com/" class="hover:underline">Home</a>
+              </li>
+              <li class="mb-4">
+                <a href="https://tailwindcss.com/" class="hover:underline">Feature</a>
+              </li>
+              <li class="mb-4">
+                <a href="https://tailwindcss.com/" class="hover:underline">About us</a>
+              </li>
+              <li class="mb-4">
+                <a href="https://tailwindcss.com/" class="hover:underline">How does it work ?</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline ">Discord</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/av_arjun_.36.0/" class="hover:underline">Instagram</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+            class="hover:underline">PrimeBudget™</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
-  
-    <!-- flowbit Script link  -->
-    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  <!-- js link -->
+  <script src="./src/js/index.js" defer></script>
+  <!-- flowbit Script link  -->
+  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>
