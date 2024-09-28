@@ -260,12 +260,12 @@ const getCurrentuser = () => {
     if (data.balance>data.expense) {
       text.classList.replace('text-red-500','text-green-500')
       text.classList.replace('hidden','block')
-      text.innerText=`You have saved ${data.balance-data.expense}`
-    }else if(data.balance==0 && data.expense==0){
+      text.innerText=`You have saved ${data.balance-data.expense} Rs`
+    }else if(data.balance-data.expense==0){
       text.classList.replace('block','hidden')
     }else{
       text.classList.replace('text-green-500','text-red-500')
-      text.innerText=`You have overspent ${data.balance-data.expense}`
+      text.innerText=`You have overspent ${data.balance-data.expense} Rs`
 
     }
 
@@ -486,8 +486,8 @@ const DispayTranscationData = () => {
         <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap">
             ${element.expenseType}
         </th>
-        <td class="px-6 py-4 text-green-500">
-           + ${element.expenseAmount}
+        <td class="px-6 py-4 text-red-500">
+           - ${element.expenseAmount}
         </td>
         <td class="px-6 py-4">
             ${element.currentBalance}
