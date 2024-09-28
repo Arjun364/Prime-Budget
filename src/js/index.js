@@ -165,6 +165,8 @@ const CheckUsername = () => {
   }
 }
 
+// CheckUsername()
+
 
 const checkEmail = () => {
   const email = document.getElementById('email').value
