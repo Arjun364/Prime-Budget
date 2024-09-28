@@ -248,12 +248,26 @@ const getCurrentuser = () => {
     const email = document.getElementById('Pemail')
     const balance = document.getElementById('balance')
     const spent = document.getElementById('spent')
+    const text = document.getElementById('Overtext')
     const data = JSON.parse(localStorage.getItem(currentUser))
 
     username.innerText = data.username
     email.innerText = data.email
     balance.innerText = `${data.balance} Rs`
     spent.innerText = `${data.expense} Rs`
+
+
+    if (data.balance>data.expense) {
+      text.classList.replace('text-red-500','text-green-500')
+      text.classList.replace('hidden','block')
+      text.innerText=`You have saved ${data.balance-data.expense}`
+    }else if(data.balance==0 && data.expense==0){
+      text.classList.replace('block','hidden')
+    }else{
+      text.classList.replace('text-green-500','text-red-500')
+      text.innerText=`You have overspent ${data.balance-data.expense}`
+
+    }
 
   }
 }
