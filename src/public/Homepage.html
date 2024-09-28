@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Project Title -->
+    <title>Home page</title>
+    <!-- favicon link  -->
+    <link rel="shortcut icon" href="../assets/Vector.svg" type="image/x-icon">
+    <!-- Style.css link  -->
+    <link rel="stylesheet" href="../style/output/style.css">
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/7f4f6e1f8e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-cover py-[3rem] px-[1rem] lg:px-[5rem] flex flex-col gap-5 "
+    style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url('../assets/background1.svg');">
+    <!-- alert section -->
+     <!-- fail alert -->
+     <div id="alert3" class="hidden items-center p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800" role="alert">
+        <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div id="failText">
+          <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
+        </div>
+      </div>
+
+      <!-- success alert -->
+      <div id="alert4" class="hidden items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800" role="alert">
+        <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div id="SuccessText">
+          <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
+        </div>
+      </div>
+
+    <div class="w-full min-h-[80vh] flex flex-col items-center gap-4 px-[1rem] md:px-[2rem]
+    py-[2rem] bg-white rounded-lg">
+        <!-- heading -->
+        <div class="w-full py-[1rem] flex items-center justify-between">
+            <!-- user details -->
+            <div
+                class="flex items-center justify-around gap-2 px-[.5rem] py-[.3rem] md:min-w-[10rem] min-h-[3.5rem] border-2 border-solid border-gray-200 rounded-full">
+                <div class="min-w-[3rem] h-[3rem] bg-black rounded-full"></div>
+                <div class="hidden md:flex flex-col">
+                    <span class="text-[1.2rem] font-extrabold" id="Puser">Username</span>
+                    <span class="text-sm" id="Pemail">emailaddress@gmail.com</span>
+                </div>
+            </div>
+            <!-- heading -->
+            <h1 class="heading1">Budget Calculator</h1>
+            <!-- logout btn -->
+            <button class="btn4" onclick="logout()"> <span class="hidden md:flex">Log out</span>  <img src="../assets/exit.svg" alt="log out"></button>
+        </div>
+
+        <!-- add money section -->
+        <div class="w-full px-[.7rem] py-[1rem] flex flex-col gap-2 items-start justify-between border-[2px] border-solid border-black rounded-md
+        ">
+            <h3 class="subHeading2">Add money</h3>
+            <div class=" w-full flex flex-col md:flex-row gap-3">
+                <!-- add income type -->
+                <div class="relative flex-1">
+                    <input type="text" id="incomeType"
+                        class="block px-2.5 pb-2.5 pt-4 w-full text-[1rem] font-bold text-gray-900 bg-transparent rounded-lg border-2 border-black appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " />
+                    <label for="incomeType"
+                        class="absolute text-[1rem] font-bold text-black  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Enter
+                        income type</label>
+                </div>
+                <!-- add income amount-->
+                <div class="relative flex-1">
+                    <input type="number" id="incomeAmount"
+                        class="block px-2.5 pb-2.5 pt-4 w-full text-[1rem] font-bold text-gray-900 bg-transparent rounded-lg border-2 border-black appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " />
+                    <label for="incomeAmount"
+                        class="absolute text-[1rem] font-bold text-black  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Enter
+                        income Amount</label>
+                </div>
+                <button class="btn5" onclick="Addincome()">Add <i class="fa-regular fa-money-bill-1 "></i></button>
+            </div>
+        </div>
+
+        <!-- expense and balance/spent details  -->
+        <div class="w-full flex flex-col md:flex-row gap-4">
+            <!-- expense section -->
+            <div
+                class="w-full px-[.7rem] py-[1rem] gap-2 flex flex-col flex-1 border-2 border-solid border-black rounded-md">
+                <h3 class="subHeading2">Expense</h3>
+                <div class="flex flex-col gap-3">
+                    <!-- add expense type-->
+                    <div class="relative flex-1">
+                        <input type="text" id="expenseType"
+                            class="block px-2.5 pb-2.5 pt-4 w-full text-[1rem] font-bold text-gray-900 bg-transparent rounded-lg border-2 border-black appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " />
+                        <label for="expenseType"
+                            class="absolute text-[1rem] font-bold text-black  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Enter
+                            Expense Type</label>
+                    </div>
+                    <!-- add expense Amount-->
+                    <div class="relative flex-1">
+                        <input type="number" id="expenseAmount"
+                            class="block px-2.5 pb-2.5 pt-4 w-full text-[1rem] font-bold text-gray-900 bg-transparent rounded-lg border-2 border-black appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " />
+                        <label for="expenseAmount"
+                            class="absolute text-[1rem] font-bold text-black  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Enter
+                            Expense Amount
+                        </label>
+                    </div>
+                    <!-- button -->
+                    <button class="btn6" onclick="AddExpense()">Submit</button>
+                </div>
+            </div>
+
+            <div class="w-full min-h-[16rem] md:h-auto flex flex-1 border-2 border-solid border-black rounded-md">
+                <div class="w-full min-h-full md:flex-1 flex justify-center items-center flex-col  bg-green-300">
+                    <h2 class="heading2">Balance</h2>
+                    <h1 id="balance" class="font-bold text-[20px] lx:text-[30px]">100 Rs</h1>
+                </div>
+                <div class="w-full min-h-full flex justify-center items-center flex-col md:flex-1 bg-red-400">
+                    <h2 class="heading2">spent</h2>
+                    <h1 id="spent" class="font-bold text-[20px] lx:text-[30px]">0 Rs</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- View more -->
+        <div id="viewHeader" class="w-full flex items-center justify-center relative">
+            <h3 class="subHeading2 cursor-pointer" onclick="view('open')">View More <i id="arrow" class="fa-solid fa-chevron-down "></i></h3>
+            <button class="btn7 absolute bottom-0 right-0"><span class=" hidden md:inline-block" onclick="clearTranscations()">clear </span><i class="fa-solid fa-paintbrush"></i></button>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="viewBody" class="w-full min-h-[50vh] hidden flex-col items-center gap-4 px-[2rem]
+    py-[2rem] bg-white rounded-lg">
+        <h1 class="heading1">Income & Expense Details</h1>
+        <hr class="w-full">
+
+        <div class="w-full justify-between flex flex-col lx:flex-row gap-4 md:px-[4rem]">
+            <!-- income -->
+            <div>
+                <h2 class="heading2">Income</h2>
+                <!-- table -->
+                <div  class="relative overflow-x-auto">
+                    <table id="myTable" class="w-full text-sm text-left rtl:text-right ">
+                        <thead class="text-xs text-white font-bold uppercase bg-gray-600 rounded-tr-md">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Type
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Amount
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Balance
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Date & Time
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="incomeData">
+                            <tr class="bg-white border-b ">
+                                <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                    Salary
+                                </th>
+                                <td class="px-6 py-4 text-green-500">
+                                    +1000
+                                </td>
+                                <td class="px-6 py-4">
+                                    1000
+                                </td>
+                                <td class="px-6 py-4">
+                                    18/8/2024 - 12:45:08 PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- expense -->
+            <div>
+                <h2 class="heading2">Expense</h2>
+                <!-- table -->
+                <div class="relative overflow-x-auto">
+                    <table id="myTable2" class="w-full text-sm text-left rtl:text-right ">
+                        <thead class="text-xs text-white font-bold uppercase bg-gray-600 rounded-tr-md">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Type
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Amount
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Balance
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Date & Time
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenseData">
+                            <tr class="bg-white border-b ">
+                                <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                    Food
+                                </th>
+                                <td class="px-6 py-4 text-red-500">
+                                    -100
+                                </td>
+                                <td class="px-6 py-4">
+                                    900
+                                </td>
+                                <td class="px-6 py-4">
+                                    18/8/2024 - 1:05:18 PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <hr class="w-full">
+        <div>
+            <button class="btn8" onclick="printTable()">Print <i class="fa-solid fa-print"></i></button>
+        </div>
+    </div>
+
+    <!-- js link -->
+    <script src="../js/index.js"></script>
+    <!-- flowbit Script link  -->
+    <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+
+</html>

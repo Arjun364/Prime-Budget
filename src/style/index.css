@@ -8,7 +8,7 @@
 @tailwind utilities;
 
 *{
-    @apply box-border font-jura;
+    @apply box-border font-jura scroll-smooth;
 }
 
 body{
@@ -28,6 +28,10 @@ body{
 .subHeading1{
     @apply font-bold text-[1.2rem];
 }
+
+.subHeading2{
+    @apply font-extrabold text-[24px] line-clamp-4;
+}
 .navFont{
     @apply font-bold focus:text-white
     focus:bg-orange-dark md:focus:bg-transparent md:focus:text-orange-dark 
@@ -41,7 +45,7 @@ body{
 /* section */
 
 .section1{
-    @apply w-full min-h-[90vh] py-[3rem] px-[1rem] lg:px-[5rem];
+    @apply w-full min-h-[90vh] py-[3rem] px-[1rem] lg:px-[5rem] justify-center;
 }
 
 
@@ -59,6 +63,25 @@ body{
     @apply w-full h-[2.5rem] bg-orange hover:bg-orange-dark focus:bg-black rounded-md
     text-white font-bold;
 }
+
+.btn4{
+    @apply flex  justify-center items-center gap-4 px-[1rem] py-[1rem] md:py-[.5rem] rounded-md bg-red-600 text-white font-extrabold;
+}
+
+.btn5{
+    @apply w-full md:w-[6rem] py-[.5rem] font-bold bg-green-500 text-white rounded-md;
+}
+.btn6{
+    @apply w-full py-[.5rem] font-bold bg-red-500 text-white rounded-md;
+}
+.btn7{
+    @apply px-[1rem] md:px-[3rem] py-[.5rem] font-bold bg-orange text-white rounded-full;
+}
+.btn8{
+    @apply px-[1.5rem] py-[.5rem] font-bold bg-blue-600 text-white rounded-full;
+}
+
+
 
 
 /* slip */

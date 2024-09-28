@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="./src/style/output/style.css">
   <!-- fontawesome link -->
   <script src="https://kit.fontawesome.com/7f4f6e1f8e.js" crossorigin="anonymous"></script>
+  <!-- print.css -->
+
 
 </head>
 
@@ -40,30 +42,30 @@
           <ul
             class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
             <li>
-              <a href="#" class="navFont" aria-current="page">Home</a>
+              <a href="#hero" class="navFont" aria-current="page">Home</a>
             </li>
             <li>
-              <a href="#" class="navFont">Features</a>
+              <a href="#features" class="navFont">Features</a>
             </li>
             <li>
-              <a href="#" class="navFont">About Us</a>
+              <a href="#about" class="navFont">About Us</a>
             </li>
             <li>
-              <a href="#" class="navFont ">How it works ?</a>
+              <a href="#HIW" class="navFont ">How it works ?</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- hero section -->
-    <section
+    <section id="hero"
       class="w-full h-full flex-col lg:flex-row pt-[6rem] lg:py-0 md:px-[5rem] lx:px-[9rem] flex justify-end lg:justify-between items-center  ">
       <div class="flex flex-col items-center lg:items-start gap-3">
         <h1 class="heading1 text-white">Prime Budget</h1>
         <h1 class="heading1">Simple Budget Calculator</h1>
         <p class="text-white text-sm text-center md:text-[1rem]">Effortlessly track your expenses and manage your
           budget.</p>
-        <button type="button" class="btn2">Get started</button>
+        <button type="button" class="btn2" onclick="move('auth')">Get started</button>
       </div>
       <img class=" w-[20rem] lg:w-[27rem] lx:w-[35rem] lg:absolute lg:bottom-[5rem] lx:bottom-[1rem] right-[7rem]"
         src="./src/assets/Freelancer--Streamline-London.svg.svg" alt="The man with a lap">
@@ -71,7 +73,7 @@
   </section>
 
   <!-- What makes prime budget unique -->
-  <section class="section1 flex flex-col gap-[4rem] ">
+  <section id="features" class="section1 flex flex-col gap-[4rem] ">
     <h1 class="heading1">What Makes Prime Budget Unique?</h1>
     <div class="w-full h-full">
       <div class="grid lg:grid-cols-2 grid-rows-2 gap-4">
@@ -99,11 +101,10 @@
         </div>
       </div>
     </div>
-
-    <!-- How its works -->
   </section>
+  <!-- How its works -->
 
-  <section class="section1 px-1 flex flex-col gap-[1rem] lg:gap-[3rem] ">
+  <section id="HIW" class="section1 px-1 flex flex-col gap-[1rem] lg:gap-[3rem] ">
     <!-- heading section  -->
     <div>
       <h1 class="heading1">How It Works</h1>
@@ -144,7 +145,7 @@
 
   </section>
   <!-- about us -->
-  <section class="section1 flex flex-col relative">
+  <section id="about" class="section1 flex flex-col relative">
     <div>
       <h1 class="heading1">About Us</h1>
       <p class="subHeading1 text-orange-light">Our Mission</p>
@@ -175,7 +176,7 @@
     <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-orange-dark text-white">
       <h2 id="accordion-color-heading-1">
         <button type="button"
-          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black rounded-t-xl focus:ring-0 focus:ring-blue-200 gap-3 bg-white"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black rounded-t-xl focus:ring-0 focus:ring-blue-200 gap-3 bg-orange-dark"
           data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
           <span>Is Prime Budget free to use?</span>
           <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
@@ -193,7 +194,7 @@
       </div>
       <h2 id="accordion-color-heading-2">
         <button type="button"
-          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black focus:ring-0 focus:ring-blue-200 gap-3 bg-white"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black focus:ring-0 focus:ring-blue-200 gap-3 bg-orange-dark"
           data-accordion-target="#accordion-color-body-2" aria-expanded="false" aria-controls="accordion-color-body-2">
           <span>Do I need to create an account to use Prime Budget?</span>
           <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
@@ -212,7 +213,7 @@
       </div>
       <h2 id="accordion-color-heading-3">
         <button type="button"
-          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black focus:ring-0 focus:ring-blue-200 gap-3 bg-white"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white border border-b-0 border-black focus:ring-0 focus:ring-blue-200 gap-3 bg-orange-dark"
           data-accordion-target="#accordion-color-body-3" aria-expanded="false" aria-controls="accordion-color-body-3">
           <span>Can I export my budget data?</span>
           <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
@@ -231,7 +232,7 @@
     </div>
   </section>
 
-<!-- footer section -->
+  <!-- footer section -->
 
   <footer class="bg-white dark:bg-gray-900">
     <div class="mx-auto w-full max-w-screen-xl px-[2rem] md:px-[4rem] py-6 lg:py-8">
@@ -246,16 +247,16 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
               <li class="mb-4">
-                <a href="https://flowbite.com/" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Home</a>
               </li>
               <li class="mb-4">
-                <a href="https://tailwindcss.com/" class="hover:underline">Feature</a>
+                <a href="#feature" class="hover:underline">Feature</a>
               </li>
               <li class="mb-4">
-                <a href="https://tailwindcss.com/" class="hover:underline">About us</a>
+                <a href="#about" class="hover:underline">About us</a>
               </li>
               <li class="mb-4">
-                <a href="https://tailwindcss.com/" class="hover:underline">How does it work ?</a>
+                <a href="HIW" class="hover:underline">How does it work ?</a>
               </li>
             </ul>
           </div>
@@ -288,11 +289,11 @@
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
             class="hover:underline">PrimeBudget™</a>. All Rights Reserved.
         </span>
-        <div class="flex mt-4 sm:justify-center sm:mt-0">
-          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+        <!-- <div class="flex mt-4 sm:justify-center sm:mt-0">
+          <a href="https://www.facebook.com/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+          <a href="" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
             <i class="fa-brands fa-discord"></i>
           </a>
           <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
@@ -301,7 +302,7 @@
           <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
             <i class="fa-brands fa-github"></i>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
